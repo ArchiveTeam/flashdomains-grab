@@ -30,7 +30,6 @@ from warcio.warcwriter import WARCWriter
 if StrictVersion(seesaw.__version__) < StrictVersion('0.8.5'):
     raise Exception('This pipeline needs seesaw version 0.8.5 or higher.')
 
-
 ###########################################################################
 # Find a useful Wget+Lua executable.
 #
