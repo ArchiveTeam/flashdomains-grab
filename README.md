@@ -22,7 +22,7 @@ Running without a warrior
 To run this outside the warrior, clone this repository, cd into its directory and run:
 
     python3 -m pip install setuptools wheel
-    python3 -m pip install --upgrade seesaw zstandard requests
+    python3 -m pip install --upgrade seesaw zstandard requests warcio
     ./get-wget-lua.sh
 
 then start downloading with:
@@ -64,7 +64,7 @@ Package `libzstd-dev` version 1.4.4 is required which is currently available fro
     && apt-get install -y git-core libgnutls-dev lua5.1 liblua5.1-0 liblua5.1-0-dev screen bzip2 zlib1g-dev flex autoconf autopoint texinfo gperf lua-socket rsync automake pkg-config python3-dev python3-pip build-essential \
     && apt-get -t buster-backports install zstd libzstd-dev libzstd1
     python3 -m pip install setuptools wheel
-    python3 -m pip install --upgrade seesaw zstandard requests
+    python3 -m pip install --upgrade seesaw zstandard requests warcio
     su -c "cd /home/archiveteam; git clone https://github.com/ArchiveTeam/flashdomains-grab.git; cd flashdomains-grab; ./get-wget-lua.sh" archiveteam
     screen su -c "cd /home/archiveteam/flashdomains-grab/; run-pipeline3 pipeline.py --concurrent 2 --address '127.0.0.1' YOURNICKHERE" archiveteam
     [... ctrl+A D to detach ...]
