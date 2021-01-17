@@ -55,7 +55,7 @@ if not WGET_AT:
 #
 # Update this each time you make a non-cosmetic change.
 # It will be added to the WARC files and reported to the tracker.
-VERSION = '20201231.03'
+VERSION = '20210117.02'
 USER_AGENT = 'Archive Team'
 TRACKER_ID = 'flashdomains'
 TRACKER_HOST = 'trackerproxy.archiveteam.org'
@@ -282,9 +282,9 @@ pipeline = Pipeline(
         max_tries=1,
         accept_on_exit_code=[-6, 0, 4, 8],
         env={
-            'max_seconds': str(30*24*3600),
-            'max_urls': '1000000',
-            'max_bytes': str(400*1024**3)
+            'max_seconds': str(12*3600),
+            'max_urls': '100000',
+            'max_bytes': str(20*1024**3)
         }
     ),
     PrepareStatsForTracker(
